@@ -21,8 +21,6 @@ RUN set -ex \
 RUN set -ex \
     && mkdir /docker-entrypoint-files-replace.d /docker-entrypoint-files-add.d /etc/nginx/vhost.conf.d
 
-VOLUME [ "/usr/share/nginx/html" ]
-
 COPY setup/initfiles.sh /docker-entrypoint.d/99-initfiles.sh
 COPY setup/nginx.conf /etc/nginx/nginx.conf
 COPY setup/vhost.conf /etc/nginx/conf.d/default.conf
